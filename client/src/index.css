@@ -4,11 +4,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-   html,
+@la  html,
   body {
     overflow-x: clip;
+    overscroll-behavior: none; /* stop the iPhone rubber-band bounce */
+    -webkit-text-size-adjust: 100%; /* stop iOS enlarging text on rotate */
   }
+  /* Taps act instantly – no double-tap zoom on buttons and links */
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  label {
+    touch-action: manipulation;
+  }
+  /* iPhone zooms in on any field with text smaller than 16px – keep fields at 16px on phones */
+  @media (max-width: 767px) {
+    input,
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
+  }yer base {
+
   html {
     scroll-behavior: smooth;
   }
