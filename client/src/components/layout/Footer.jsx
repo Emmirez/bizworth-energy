@@ -22,18 +22,9 @@ export default function Footer() {
             <Logo className="h-[72px]" />
           </div>
 
-          <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-relaxed text-brand-muted">
-            {company.address}
-            <br />
-                        Tel: {company.phone}
-            <br />
-            Email:{' '}
-            <a href={`mailto:${company.email}`} className="hover:text-brand-blue">
-              {company.email}
-            </a>
-          </p>
+          
 
-          <p className="mt-4 text-[17px] leading-relaxed text-brand-muted">
+          <p className="mt-5 text-[17px] leading-relaxed text-brand-muted">
             © {company.year} {company.name}
             <br />– Registration No: {company.registrationNo}
           </p>
